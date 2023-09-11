@@ -21,6 +21,8 @@ header nav .email p {
     font-size: 1.25rem; letter-spacing:-0.04em;
 }
 
+
+
 /* main */
 main {
     background:url(../images/bg.jpg) no-repeat center fixed;
@@ -28,12 +30,23 @@ main {
 }
 /* section 묶음 */
 main > * {
-    width:calc(100% - 240px); height:100vh; 
-    margin:0 auto; padding-top:100px;
+    width:calc(100% - 240px);
+    margin:0 auto 50px; padding-top:100px;
+}
+main > *:last-child {margin-bottom: 0;}
+/* h1 묶음 */
+main #web_redesign h1, 
+main #web_landing h1,
+main #design_sns h1,
+main #design_card_news h1 {
+    font-size: 2.5rem; letter-spacing:-0.04em;
+    font-family: 'Yeseva One', cursive;
+    margin-bottom:50px;
 }
 
 /* home */
 main #home {
+    height:100vh; 
     display: flex; flex-flow: column nowrap; 
     justify-content: center; align-items: center;
 }
@@ -47,6 +60,7 @@ main #home .mouse img {animation:mouse_move 1s linear alternate infinite;}
 }
 /* profile */
 main #profile {
+    height:100vh; 
     display:flex; flex-flow: column nowrap; 
     align-items: center; justify-content: center;
 }
@@ -56,12 +70,10 @@ main #profile h1 {
 main #profile h1 img {}
 main #profile .con {
     width:100%;
-    /* background:lightcoral; */
     display: flex; align-items: center;
     justify-content:center;
 }
 main #profile .con .con_left {
-    /* background: lightblue; */
     display: flex; flex-flow: column nowrap;
     align-items: center;
     margin-right: 200px;
@@ -76,7 +88,6 @@ main #profile .con .con_left .my_info dl {
     margin-top:10px;
 }
 main #profile .con .con_left .my_info dl dt {
-    /* background:lightblue; */
     width:75px;
     font-size:1.25rem; letter-spacing:-0.04em; 
     font-weight:700;
@@ -113,36 +124,32 @@ main #profile .con .con_right .skill dd {
 main #profile .con .con_right .skill dd img {width:50px;}
 /* web_redesign */
 main #web_redesign {
+    height:100vh; 
     display: flex; flex-flow: column nowrap;
     align-items: center;
 }
-main #web_redesign h1 {
-    font-size: 2.5rem; letter-spacing:-0.04em;
-    font-family: 'Yeseva One', cursive;
-    margin-bottom:50px;
-}
+main #web_redesign h1 {}
 main #web_redesign .con {
     display: flex; flex-flow: column nowrap;
     width:100%;
 }
 main #web_redesign .con >div {
-    display:flex; align-items:center; justify-content:space-between;
-    background:lightgoldenrodyellow;
+    display:flex; align-items:center; justify-content:center;
+    background:#fff;
 }
 main #web_redesign .con >div img {
-    width:600px; height:380px;
+    width:550px; margin-right:100px;
 }
 main #web_redesign .con >div .p_con {
-    background:lightblue;
     display: flex; flex-flow: column nowrap; 
     align-items: center;
 }
 main #web_redesign .con >div .p_con h2 {
-    font-size: 2.5rem; letter-spacing: -0.04em; font-weight: 700;
+    font-size:2.5rem; letter-spacing:-0.04em; font-weight:700;
     margin-bottom:35px;
 }
 main #web_redesign .con >div .p_con .p_info {
-    margin: 0 30px 35px 30px;
+    margin:0 30px 35px 30px;
     /* margin-bottom:35px; */
 }
 main #web_redesign .con >div .p_con .p_info > p {
@@ -162,12 +169,11 @@ main #web_redesign .con >div .p_con .p_info .p_info_txt dl dd {
 }
 main #web_redesign .con >div .p_con .link {
     width:100%;
-    background:pink;
     display:flex; align-items:center; justify-content:space-between;
 }
 main #web_redesign .con >div .p_con .link a {
-    letter-spacing: -0.04rem;
-    text-align: center;
+    letter-spacing:-0.04rem; font-weight:500;
+    text-align:center;
     background:#000; color:#fff;
     padding:20px 0;
     width:245px;
@@ -175,3 +181,109 @@ main #web_redesign .con >div .p_con .link a {
 main #web_redesign .con >div .p_con .link a:hover {
     background:#ff4090;
 }
+main #web_redesign .con .project_01 {
+    margin-bottom:50px;
+}
+main #web_redesign .con .project_01 .p_con h2 {
+    color:#CA1D31;
+}
+main #web_redesign .con .project_02 .p_con h2 {
+    color:#F56F98;
+}
+/* web_landing */
+main #web_landing {
+    display:flex; flex-flow: column nowrap;
+    align-items: center;
+    padding:150px 0;
+}
+main #web_landing h1 {}
+main #web_landing .con {
+    width:100%;
+    display:flex; align-items: center; justify-content:center;
+}
+main #web_landing .con > div {
+    display: flex; flex-flow:  column nowrap; align-items: center;
+}
+main #web_landing .con > div .link_bg {
+    background:url(../images/web_1.jpg) no-repeat center;
+    background-size:cover;
+    width:700px; height:500px;
+    margin-bottom:30px;
+    transition: all 0.5s;
+}
+main #web_landing .con > div .link_bg .link {
+    display: flex; flex-flow: column nowrap; align-items: center;
+    margin-top:250px;
+    display: none;
+    transition: all 0.5s;
+}
+main #web_landing .con > div .link_bg .link a {
+    background:#000; color:#fff;
+    width:300px; text-align: center;
+    padding:20px 0;
+    margin-bottom:10px;
+    transition: all 0.3s;
+}
+main #web_landing .con > div .link_bg .link a:last-child {margin-bottom:0;}
+main #web_landing .con > div h2 {
+    font-size: 1.5rem; letter-spacing:-0.04em; font-weight: 700;
+}
+main #web_landing .con .project_01 {margin-right:100px;}
+main #web_landing .con .project_01 h2 {
+    background: linear-gradient(90deg, #2EBC83 7.05%, #000 29.86%, #F96666 51.43%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+main #web_landing .con .project_02 h2 {
+    color:#799B44;
+}
+main #web_landing .con > div .link_bg:hover {
+    background:url(../images/web_1_hover.jpg.png) no-repeat center;
+    background-size:cover;
+}
+main #web_landing .con > div .link_bg:hover .link {display: flex;}
+main #web_landing .con > div .link_bg .link a:hover {background:#ff4090;}
+/* design_sns */
+main #design_sns {
+    display: flex; flex-flow: column nowrap;
+    align-items: center;
+    padding:150px 0;
+}
+main #design_sns h1 {}
+main #design_sns .con {
+    width:100%;
+    display: flex; flex-flow: column nowrap; 
+    align-items: center; justify-content: space-between;
+}
+main #design_sns .con .banner_wrap {
+    width:100%;
+    display: flex; justify-content:space-between;
+    margin-bottom:30px;
+}
+main #design_sns .con .banner_wrap .banner {}
+main #design_sns .con .banner_wrap .banner img {
+    width:800px; height:225px;
+}
+main #design_sns .con .sns_wrap {
+    width:100%;
+    display: flex; justify-content: space-between;
+}
+main #design_sns .con .sns_wrap .sns {}
+main #design_sns .con .sns_wrap .sns img{
+    width:250px; height:250px;
+}
+/* card_news */
+main #design_card_news {
+    display: flex; flex-flow: column nowrap;
+    align-items: center;
+}
+main #design_card_news h1 {}
+main #design_card_news .con {
+    width:100%;
+}
+main #design_card_news .con .card_news_wrap {
+    display: flex; flex-flow: row wrap; justify-content: space-between;
+}
+main #design_card_news .con .card_news_wrap .card_news {width:20%; margin: 15px;}
+main #design_card_news .con .card_news_wrap .card_news img {width:100%;}
