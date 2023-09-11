@@ -1,0 +1,177 @@
+/* header */
+header {
+    width:100%; margin: 0 auto;
+    position: fixed;
+}
+header nav {
+    width: calc(100% - 240px); margin: 30px auto 0;
+    border-top: 1px solid #ff4090;
+    border-bottom: 5px solid #ff4090;
+    display: flex; align-items: center; justify-content: space-between;
+    padding:17px 0;
+}
+header nav .gnb {}
+header nav .gnb a {
+    font-size: 1.25rem; letter-spacing:-0.04em;
+    font-weight: 700;
+    margin-right:30px;
+}
+header nav .email {}
+header nav .email p {
+    font-size: 1.25rem; letter-spacing:-0.04em;
+}
+
+/* main */
+main {
+    background:url(../images/bg.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+/* section 묶음 */
+main > * {
+    width:calc(100% - 240px); height:100vh; 
+    margin:0 auto; padding-top:100px;
+}
+
+/* home */
+main #home {
+    display: flex; flex-flow: column nowrap; 
+    justify-content: center; align-items: center;
+}
+main #home h1 {}
+main #home h1 img {}
+main #home .mouse {margin-top: 100px;}
+main #home .mouse img {animation:mouse_move 1s linear alternate infinite;}
+@keyframes mouse_move {
+    0% {transform:translateY(0);}
+    100% {transform:translateY(-20px);}
+}
+/* profile */
+main #profile {
+    display:flex; flex-flow: column nowrap; 
+    align-items: center; justify-content: center;
+}
+main #profile h1 {
+    margin-bottom:50px;
+}
+main #profile h1 img {}
+main #profile .con {
+    width:100%;
+    /* background:lightcoral; */
+    display: flex; align-items: center;
+    justify-content:center;
+}
+main #profile .con .con_left {
+    /* background: lightblue; */
+    display: flex; flex-flow: column nowrap;
+    align-items: center;
+    margin-right: 200px;
+}
+main #profile .con .con_left #photo {
+    margin-bottom:70px;
+}
+main #profile .con .con_left #photo img {}
+main #profile .con .con_left .my_info {}
+main #profile .con .con_left .my_info dl {
+    display: flex; align-items: center;
+    margin-top:10px;
+}
+main #profile .con .con_left .my_info dl dt {
+    /* background:lightblue; */
+    width:75px;
+    font-size:1.25rem; letter-spacing:-0.04em; 
+    font-weight:700;
+    margin-right:30px;
+}
+main #profile .con .con_left .my_info dl dd {
+    font-size:1.25rem; letter-spacing:-0.04em;
+}
+main #profile .con .con_right {
+    display:flex; flex-flow: column nowrap;
+    justify-content: center;
+}
+main #profile .con .con_right dl {
+    margin-bottom:60px;
+}
+main #profile .con .con_right dl:last-child {margin-bottom:0;}
+main #profile .con .con_right dl dt {
+    font-size: 1.6875rem; letter-spacing:-0.04em; 
+    font-weight: 700;
+    margin-bottom:25px;
+}
+main #profile .con .con_right dl dd {
+    font-size: 1.25rem; letter-spacing:-0.04em;
+    line-height:35px;
+}
+main #profile .con .con_right dl dd span {
+    font-size: 1.25rem; letter-spacing:-0.04em;
+    font-weight: 500; margin-right:15px;
+}
+main #profile .con .con_right .skill {}
+main #profile .con .con_right .skill dd {
+    display: flex; justify-content: space-between;
+}
+main #profile .con .con_right .skill dd img {width:50px;}
+/* web_redesign */
+main #web_redesign {
+    display: flex; flex-flow: column nowrap;
+    align-items: center;
+}
+main #web_redesign h1 {
+    font-size: 2.5rem; letter-spacing:-0.04em;
+    font-family: 'Yeseva One', cursive;
+    margin-bottom:50px;
+}
+main #web_redesign .con {
+    display: flex; flex-flow: column nowrap;
+    width:100%;
+}
+main #web_redesign .con >div {
+    display:flex; align-items:center; justify-content:space-between;
+    background:lightgoldenrodyellow;
+}
+main #web_redesign .con >div img {
+    width:600px; height:380px;
+}
+main #web_redesign .con >div .p_con {
+    background:lightblue;
+    display: flex; flex-flow: column nowrap; 
+    align-items: center;
+}
+main #web_redesign .con >div .p_con h2 {
+    font-size: 2.5rem; letter-spacing: -0.04em; font-weight: 700;
+    margin-bottom:35px;
+}
+main #web_redesign .con >div .p_con .p_info {
+    margin: 0 30px 35px 30px;
+    /* margin-bottom:35px; */
+}
+main #web_redesign .con >div .p_con .p_info > p {
+    font-size: 1.25rem; letter-spacing: -0.04em; font-weight: 500;
+    margin-bottom:20px;
+}
+main #web_redesign .con >div .p_con .p_info .p_info_txt {}
+main #web_redesign .con >div .p_con .p_info .p_info_txt dl {
+    display: flex;
+}
+main #web_redesign .con >div .p_con .p_info .p_info_txt dl dt {
+    font-size: 1.25rem; line-height: 32px;
+    width:130px; margin-right:10px;
+}
+main #web_redesign .con >div .p_con .p_info .p_info_txt dl dd {
+    font-size: 1.25rem; line-height: 32px;
+}
+main #web_redesign .con >div .p_con .link {
+    width:100%;
+    background:pink;
+    display:flex; align-items:center; justify-content:space-between;
+}
+main #web_redesign .con >div .p_con .link a {
+    letter-spacing: -0.04rem;
+    text-align: center;
+    background:#000; color:#fff;
+    padding:20px 0;
+    width:245px;
+}
+main #web_redesign .con >div .p_con .link a:hover {
+    background:#ff4090;
+}
