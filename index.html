@@ -11,22 +11,14 @@
     <link rel="icon" href="./images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/index.css">
-    <style>
-        #sns_popup {
-            position:fixed; left:0; top:0;
-            width:100%; height:100vh; z-index:9999;
-            background:rgba(255,255,255,0.5);
-        }
-        #sns_popup .contents {
-            background:aqua;
-            width:900px; height:800px;
-            margin:70px auto 0; overflow-y:auto;
-        }
-        #sns_popup .contents img {width:100%;}
-    </style>
 </head>
 <body>
     <div id="sns_popup">
+        <div class="contents">
+            <img src="" alt="">
+        </div>
+    </div>
+    <div id="bnr_popup">
         <div class="contents">
             <img src="" alt="">
         </div>
@@ -211,8 +203,8 @@
             <h1>SNS Design</h1>
             <div class="con">
                 <div class="banner_wrap">
-                    <a href="#" class="banner"><img src="./images/sns/sns_bnr2.jpg" alt=""></a>
                     <a href="#" class="banner"><img src="./images/sns/sns_bnr1.jpg" alt=""></a>
+                    <a href="#" class="banner"><img src="./images/sns/sns_bnr2.jpg" alt=""></a>
                 </div>
                 <div class="sns_wrap">
                     <a href="#" class="sns"><img src="./images/sns/sns1.jpg" alt=""></a>
@@ -297,6 +289,27 @@
                     sns_popup.style.display = 'none'
                 })
 
+
+                // bnr_popup 
+                const bnr_a = document.querySelectorAll('.banner_wrap a')
+                const bnr_popup = document.querySelector('#bnr_popup')
+                const bnr_popup_img = document.querySelector('#bnr_popup img')
+                // console.log(bnr_a, bnr_popup, bnr_popup_img)
+                
+                //초기 팝업창 숨기기
+                bnr_popup.style.display='none'
+                //bnr a 클릭 시 bnr_popup 이미지 출력
+                bnr_a.forEach(function(t,i,a){
+                    t.addEventListener('click',function(e){
+                        e.preventDefault()
+                        bnr_popup.style.display='block'
+                        bnr_popup_img.src=`./images/sns/sns_bnr${i+1}.jpg`
+                    })
+                })
+                //아무곳이나 클릭 시 팝업 숨기기
+                bnr_popup.addEventListener('click',function(){
+                    bnr_popup.style.display = 'none'
+                })
 		</script>
     </main>
 </body>

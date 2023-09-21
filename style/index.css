@@ -428,3 +428,29 @@ main #last_page h1 {
     /* (위)링크, 버튼 등 선택이 안되는 문제 해결 */
     pointer-events:none;
 }
+
+/* popup */
+#sns_popup {
+    position:fixed; left:0; top:0;
+    width:100%; height:100vh; z-index:9999;
+    background:rgba(255, 255, 255, 0.5);
+}
+#sns_popup .contents {
+    background:aqua;
+    width:800px; height:800px;
+    margin:100px auto 0; 
+    /* overflow-y:auto; *//* 새로가 부족할 시 스크롤 나오게 하기 */
+}
+#sns_popup .contents img {width:100%;}
+
+#bnr_popup {
+    position:fixed; left:0; top:0;
+    width:100%; height:100vh; z-index:9999;
+    background:rgba(0, 0, 0, 0.5);
+}
+#bnr_popup .contents {
+    background:black;
+    width:1200px; height:400px;
+    margin:250px auto 0; 
+}
+#bnr_popup .contents img {width:100%;}
