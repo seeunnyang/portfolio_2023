@@ -11,8 +11,26 @@
     <link rel="icon" href="./images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/index.css">
+    <style>
+        #sns_popup {
+            position:fixed; left:0; top:0;
+            width:100%; height:100vh; z-index:9999;
+            background:rgba(255,255,255,0.5);
+        }
+        #sns_popup .contents {
+            background:aqua;
+            width:900px; height:800px;
+            margin:70px auto 0; overflow-y:auto;
+        }
+        #sns_popup .contents img {width:100%;}
+    </style>
 </head>
 <body>
+    <div id="sns_popup">
+        <div class="contents">
+            <img src="" alt="">
+        </div>
+    </div>
     <header>
         <nav>
             <div class="gnb">
@@ -197,12 +215,12 @@
                     <a href="#" class="banner"><img src="./images/sns/sns_bnr1.jpg" alt=""></a>
                 </div>
                 <div class="sns_wrap">
-                    <a target="_blank" href="http://choiseeun.pe.kr/design/sns/sns1.jpg" class="sns"><img src="./images/sns/sns1.jpg" alt=""></a>
-                    <a target="_blank" href="http://choiseeun.pe.kr/design/sns/sns2.jpg" class="sns"><img src="./images/sns/sns2.jpg" alt=""></a>
-                    <a target="_blank" href="http://choiseeun.pe.kr/design/sns/sns3.jpg" class="sns"><img src="./images/sns/sns3.jpg" alt=""></a>
-                    <a target="_blank" href="http://choiseeun.pe.kr/design/sns/sns4.jpg" class="sns"><img src="./images/sns/sns4.jpg" alt=""></a>
-                    <a target="_blank" href="http://choiseeun.pe.kr/design/sns/sns5.jpg" class="sns"><img src="./images/sns/sns5.jpg" alt=""></a>
-                    <a target="_blank" href="http://choiseeun.pe.kr/design/sns/sns6.jpg" class="sns"><img src="./images/sns/sns6.jpg" alt=""></a>
+                    <a href="#" class="sns"><img src="./images/sns/sns1.jpg" alt=""></a>
+                    <a href="#" class="sns"><img src="./images/sns/sns2.jpg" alt=""></a>
+                    <a href="#" class="sns"><img src="./images/sns/sns3.jpg" alt=""></a>
+                    <a href="#" class="sns"><img src="./images/sns/sns4.jpg" alt=""></a>
+                    <a href="#" class="sns"><img src="./images/sns/sns5.jpg" alt=""></a>
+                    <a href="#" class="sns"><img src="./images/sns/sns6.jpg" alt=""></a>
                 </div>
             </div>
         </section>
@@ -260,6 +278,25 @@
                 for(let i of skill_img){i.addEventListener('mouseout',function(){
                     for(let j of skill_con){j.style.display='none'}
                 })}
+
+
+                // sns a 클릭 시 sns_popup 이미지 출력
+                const sns_a = document.querySelectorAll('.sns_wrap a')
+                const sns_popup = document.querySelector('#sns_popup')
+                const sns_popup_img = document.querySelector('#sns_popup img')
+
+                sns_popup.style.display = 'none'
+                sns_a.forEach(function(t,i,a){
+                    t.addEventListener('click',function(e){
+                        e.preventDefault()
+                        sns_popup.style.display = 'block'
+                        sns_popup_img.src = `./images/sns/sns${i+1}.jpg`
+                    })
+                })
+                sns_popup.addEventListener('click',function(){
+                    sns_popup.style.display = 'none'
+                })
+
 		</script>
     </main>
 </body>
