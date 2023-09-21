@@ -1,7 +1,7 @@
 /* header */
 header {
     width:100%; margin: 0 auto;
-    position: fixed;
+    position: fixed; z-index:999;
 }
 header nav {
     width: calc(100% - 240px); margin: 20px auto 0;
@@ -9,6 +9,7 @@ header nav {
     border-bottom: 4px solid #FF697B;
     display: flex; align-items: center; justify-content: space-between;
     padding:10px 0;
+    background:rgba(255, 255, 255, 0.6);
 }
 header nav .gnb {}
 header nav .gnb a {
@@ -147,6 +148,7 @@ main #profile .con .con_right .skill_info {
 }
 main #profile .con .con_right .skill_info p {
     padding:5px; background:#FF697B; color:#fff;
+    border-radius:10px;
     font-family: 'Yeseva One', cursive;
 }
 #photoshop {}
@@ -327,16 +329,32 @@ main #design_sns .con .banner_wrap {
     margin-bottom:50px;
 }
 main #design_sns .con .banner_wrap .banner {}
+main #design_sns .con .banner_wrap a:last-child {text-align:right;}
 main #design_sns .con .banner_wrap .banner img {
-    width:800px; height:225px;
+    width:98%; filter: grayscale(80%);
+    transform:scale(1.0);
+    transition: all 0.5s;
+}
+main #design_sns .con .banner_wrap .banner img:hover {
+    filter:none;
+    transform:scale(1.05);
+    transition:transform 0.5s;
 }
 main #design_sns .con .sns_wrap {
     width:100%;
     display: flex; justify-content:space-between;
 }
 main #design_sns .con .sns_wrap .sns {}
-main #design_sns .con .sns_wrap .sns img{
+main #design_sns .con .sns_wrap .sns img {
     width:250px; height:250px;
+    width:98%; filter: grayscale(80%);
+    transform:scale(1.0);
+    transition: all 0.5s;
+}
+main #design_sns .con .sns_wrap .sns img:hover {
+    filter:none;
+    transform:scale(1.08);
+    transition:transform 0.5s;
 }
 
 /* card_news */
@@ -353,7 +371,17 @@ main #design_card_news .con .card_news_wrap {
     display: flex; flex-flow: row wrap; justify-content: space-between;
 }
 main #design_card_news .con .card_news_wrap .card_news {width:20%; margin: 15px;}
-main #design_card_news .con .card_news_wrap .card_news img {width:100%;}
+main #design_card_news .con .card_news_wrap .card_news img {
+    width:100%;
+    filter: grayscale(80%);
+    transform:scale(1.0);
+    transition: all 0.5s;
+}
+main #design_card_news .con .card_news_wrap .card_news img:hover {
+    filter:none;
+    transform:scale(1.05);
+    transition:transform 0.5s;
+}
 
 /* detail_page */
 main #design_detail_page {
