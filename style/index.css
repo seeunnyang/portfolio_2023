@@ -385,7 +385,6 @@ main #design_card_news .con .card_news_wrap .card_news img {
 }
 main #design_card_news .con .card_news_wrap .card_news:hover {
     transform:scale(1.03);
-    transition:transform 0.5s;
 }
 main #design_card_news .con .card_news_wrap .card_news:hover img {
     filter:none;
@@ -402,10 +401,16 @@ main #design_detail_page .con .design_detail_page_wrap {
     display: flex; flex-flow: row nowrap; justify-content:center;
 }
 main #design_detail_page .con .design_detail_page_wrap .detail_page {
-    width:30%; margin:30px;
+    margin:0 50px;
 }
 main #design_detail_page .con .design_detail_page_wrap .detail_page img {
-    width:400px; 
+    width:350px; 
+    filter:grayscale(80%);
+    transition:transform 0.5s;
+}
+main #design_detail_page .con .design_detail_page_wrap .detail_page:hover img {
+    filter:none;
+    transform:scale(1.01);
 }
 
 /* last_page */
@@ -437,7 +442,9 @@ main #last_page h1 {
     pointer-events:none;
 }
 
+
 /* popup */
+/* sns_popup */
 #sns_popup {
     position:fixed; left:0; top:0;
     width:100%; height:100vh; z-index:9999;
@@ -451,6 +458,7 @@ main #last_page h1 {
 }
 #sns_popup .contents img {width:100%;}
 
+/* bnr_popup */
 #bnr_popup {
     position:fixed; left:0; top:0;
     width:100%; height:100vh; z-index:9999;
@@ -463,6 +471,7 @@ main #last_page h1 {
 }
 #bnr_popup .contents img {width:100%;}
 
+/* card_popup */
 #card_popup {
     position:fixed; left:0; top:0;
     width:100%; height:100vh; z-index:9999;
@@ -476,6 +485,7 @@ main #last_page h1 {
 }
 #card_popup .contents img {width:100%;}
 
+/* detail_popup */
 #detail_popup {
     position:fixed; left:0; top:0;
     width:100%; height:100vh; z-index:9999;
@@ -483,7 +493,7 @@ main #last_page h1 {
 }
 #detail_popup .contents {
     background:black;
-    width:600px; height:900px;
+    width:700px; height:900px;
     margin:30px auto 0; 
     overflow-y:auto;/* 새로가 부족할 시 스크롤 나오게 하기 */
 }
