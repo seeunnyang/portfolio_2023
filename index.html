@@ -23,6 +23,16 @@
             <img src="" alt="">
         </div>
     </div>
+    <div id="card_popup">
+        <div class="contents">
+            <img src="" alt="">
+        </div>
+    </div>
+    <div id="detail_popup">
+        <div class="contents">
+            <img src="" alt="">
+        </div>
+    </div>
     <header>
         <nav>
             <div class="gnb">
@@ -200,7 +210,7 @@
             </div>
         </section>
         <section id="design_sns">
-            <h1>SNS Design</h1>
+            <h1>Banner & Sns Design</h1>
             <div class="con">
                 <div class="banner_wrap">
                     <a href="#" class="banner"><img src="./images/sns/sns_bnr1.jpg" alt=""></a>
@@ -220,26 +230,30 @@
             <h1>Card News</h1>
             <div class="con">
                 <div class="card_news_wrap">
-                    <a href="#" class="card_news"><img src="./images/cardnews/card1-1.png" alt=""></a>
-                    <a href="#" class="card_news"><img src="./images/cardnews/card1-2.png" alt=""></a>
-                    <a href="#" class="card_news"><img src="./images/cardnews/card1-3.png" alt=""></a>
-                    <a href="#" class="card_news"><img src="./images/cardnews/card1-4.png" alt=""></a>
-                    <a href="#" class="card_news"><img src="./images/ex_sns.png" alt=""></a>
-                    <a href="#" class="card_news"><img src="./images/ex_sns.png" alt=""></a>
-                    <a href="#" class="card_news"><img src="./images/ex_sns.png" alt=""></a>
-                    <a href="#" class="card_news"><img src="./images/ex_sns.png" alt=""></a>
+                    <a href="#" class="card_news card1">
+                        <img src="./images/cardnews/card1-1.png" alt="">
+                        <img src="./images/cardnews/card1-2.png" alt="">
+                        <img src="./images/cardnews/card1-3.png" alt="">
+                        <img src="./images/cardnews/card1-4.png" alt="">
+                    </a>
+                    <a href="#" class="card_news card2">
+                        <img src="./images/cardnews/card2-1.jpg" alt="">
+                        <img src="./images/cardnews/card2-2.jpg" alt="">
+                        <img src="./images/cardnews/card2-3.jpg" alt="">
+                        <img src="./images/cardnews/card2-4.jpg" alt="">
+                    </a>
                 </div>
             </div>
         </section>
-        <!-- <section id="design_detail_page">
+        <section id="design_detail_page">
             <h1>Detail Page</h1>
             <div class="con">
                 <div class="design_detail_page_wrap">
-                    <a href="#" class="detail_page"><img src="./images/ex_detail.png" alt=""></a>
-                    <a href="#" class="detail_page"><img src="./images/ex_detail.png" alt=""></a>
+                    <a href="#" class="detail_page"><img src="./images/detail/detail1.jpg" alt=""></a>
+                    <a href="#" class="detail_page"><img src="./images/detail/detail2.jpg" alt=""></a>
                 </div>
             </div>
-        </section> -->
+        </section>
         <section id="last_page">
             <h1>Thank you for<br>
                 watching my portfolio.</h1>
@@ -309,6 +323,49 @@
                 //아무곳이나 클릭 시 팝업 숨기기
                 bnr_popup.addEventListener('click',function(){
                     bnr_popup.style.display = 'none'
+                })
+
+
+                // card_popup 
+                const card_a = document.querySelectorAll('.card_news_wrap a')
+                const card_popup = document.querySelector('#card_popup')
+                const card_popup_img = document.querySelector('#card_popup img')
+                // console.log(card_a, card_popup, card_popup_img)
+                
+
+                //초기 팝업창 숨기기
+                card_popup.style.display='none'
+                //card_a 클릭 시 card_popup 이미지 출력
+                card_a.forEach(function(t,i,a){
+                    t.addEventListener('click',function(e){
+                        e.preventDefault()
+                        card_popup.style.display='block'
+                        card_popup_img.src=`./images/cardnews/card${i+1}_wrap.jpg`
+                    })
+                })
+                //아무곳이나 클릭 시 팝업 숨기기
+                card_popup.addEventListener('click',function(){
+                    card_popup.style.display='none'
+                })
+
+                
+                //detail_popup
+                const detail_a = document.querySelectorAll('.design_detail_page_wrap a')
+                const detail_popup = document.querySelector('#detail_popup')
+                const detail_popup_img = document.querySelector('#detail_popup img')
+
+                detail_popup.style.display='none'
+
+                detail_a.forEach(function(t,i,a){
+                    t.addEventListener('click',function(e){
+                        e.preventDefault()
+                        detail_popup.style.display='block'
+                        detail_popup_img.src=`./images/detail/detail${i+1}_popup.jpg`
+                    })
+                })
+                //아무곳이나 클릭 시 팝업 숨기기
+                detail_popup.addEventListener('click',function(){
+                    detail_popup.style.display='none'
                 })
 		</script>
     </main>

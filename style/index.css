@@ -368,19 +368,27 @@ main #design_card_news .con {
     width:100%;
 }
 main #design_card_news .con .card_news_wrap {
-    display: flex; flex-flow: row wrap; justify-content: space-between;
-}
-main #design_card_news .con .card_news_wrap .card_news {width:20%; margin: 15px;}
-main #design_card_news .con .card_news_wrap .card_news img {
     width:100%;
-    filter: grayscale(80%);
-    transform:scale(1.0);
+    display: flex; flex-flow: column nowrap;
+} 
+main #design_card_news .con .card_news_wrap .card_news {
+    display:flex; justify-content: center;
     transition: all 0.5s;
 }
-main #design_card_news .con .card_news_wrap .card_news img:hover {
-    filter:none;
-    transform:scale(1.05);
+main #design_card_news .con .card_news_wrap .card1 {
+    margin-bottom:30px;
+}
+main #design_card_news .con .card_news_wrap .card_news img {
+    width:350px; margin:0 10px;
+    filter: grayscale(80%);
+    transition: all 0.5s;
+}
+main #design_card_news .con .card_news_wrap .card_news:hover {
+    transform:scale(1.03);
     transition:transform 0.5s;
+}
+main #design_card_news .con .card_news_wrap .card_news:hover img {
+    filter:none;
 }
 
 /* detail_page */
@@ -397,7 +405,7 @@ main #design_detail_page .con .design_detail_page_wrap .detail_page {
     width:30%; margin:30px;
 }
 main #design_detail_page .con .design_detail_page_wrap .detail_page img {
-    width:100%;
+    width:400px; 
 }
 
 /* last_page */
@@ -454,3 +462,29 @@ main #last_page h1 {
     margin:250px auto 0; 
 }
 #bnr_popup .contents img {width:100%;}
+
+#card_popup {
+    position:fixed; left:0; top:0;
+    width:100%; height:100vh; z-index:9999;
+    background:rgba(0, 0, 0, 0.5);
+}
+#card_popup .contents {
+    background:black;
+    width:800px; height:800px;
+    margin:100px auto 0; 
+    overflow-y:auto;/* 새로가 부족할 시 스크롤 나오게 하기 */
+}
+#card_popup .contents img {width:100%;}
+
+#detail_popup {
+    position:fixed; left:0; top:0;
+    width:100%; height:100vh; z-index:9999;
+    background:rgba(0, 0, 0, 0.5);
+}
+#detail_popup .contents {
+    background:black;
+    width:600px; height:900px;
+    margin:30px auto 0; 
+    overflow-y:auto;/* 새로가 부족할 시 스크롤 나오게 하기 */
+}
+#detail_popup .contents img {width:100%;}
